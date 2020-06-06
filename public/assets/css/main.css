@@ -1,8 +1,48 @@
-body {
-	background: white;
-	color: black;
+/* お知らせ */
+.notice {
+    padding: .5rem 0;
+
+    background-color: #0D47A1;
+    color: #FFF;
+    text-align: center;
 }
 
-p.lede {
-	font-size: 2em;
+.notice__text {
+    margin: 0;
+}
+
+/* メイン画像 */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero__image {
+    height: 500px;
+
+    background: url("/public/assets/images/index/hero.jpg") no-repeat center;
+    background-size: cover;
+    filter: brightness(65%);
+}
+
+.hero__phrase {
+    width: 100%;
+
+    font-size: 4rem;
+    color: #FFF;
+    line-height: 1.5;
+
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    .hero__phrase {
+        font-size: 3rem;
+    }
 }

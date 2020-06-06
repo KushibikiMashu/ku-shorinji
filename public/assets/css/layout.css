@@ -1,0 +1,41 @@
+/* ヘッダー */
+.navbar {
+    padding: 0 4rem;
+
+    background-color: #00205B;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* scssを使っていないので、便宜的にElementのクラス名を付与しておく */
+.navbar__left {}
+
+.navbar__left--group {
+    margin-top: .75rem;
+
+    font-size: .875rem;
+}
+
+.navbar__left--sitename {
+    margin-top: .5rem;
+    margin-bottom: .75rem;
+
+    font-size: 1.5rem;
+}
+
+.navbar__right {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+}
+
+/* フッター */
+.footer {
+
+}

@@ -1,16 +1,53 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Browsersync Server Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京都大学体育会 少林寺拳法部</title>
+
+    <!--  共通CSS  -->
+    <link rel='stylesheet' href='assets/css/normalize.css'>
+    <link rel='stylesheet' href='assets/css/base.css'>
+    <link rel='stylesheet' href='assets/css/layout.css'>
+
     <link rel='stylesheet' href='assets/css/main.css'>
 </head>
 <body>
 
+<!-- header -->
 <header>
+    <nav class="navbar">
+        <div class="navbar__left">
+            <a href="/">
+                <p class="navbar__left--group">京都大学体育会</p>
+                <p class="navbar__left--sitename">少林寺拳法部</p>
+            </a>
+        </div>
+        <div class="navbar__right">
+            <p>
+                <a href="https://www.eikenkai.com/" target="_blank" rel="noopener">叡拳会</a>
+            </p>
+        </div>
+    </nav>
+</header>
+
+<!-- お知らせ -->
+<div class="notice">
+    <p class="notice__text">
+        <a href="/line.html">LINEで部活の情報をGET! check ></a>
+    </p>
+</div>
+
+<!-- メイン画像 -->
+<div class="hero">
+    <div class="hero__image"></div>
+    <h2 class="hero__phrase">強くなれる<br />理由を知った</h2>
+</div>
+
+<div class="container">
     <h1>Browsersync HTML injection Examples</h1>
     <p>Any changes you make to the HTML will be injected</p>
-</header>
+</div>
 
 </body>
 </html>
