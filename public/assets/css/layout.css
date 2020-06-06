@@ -1,6 +1,6 @@
 /* ヘッダー */
 .navbar {
-    padding: 0 4rem;
+    padding: .5rem 4rem;
 
     background-color: #00205B;
     color: #FFFFFF;
@@ -29,13 +29,43 @@
     align-items: center;
 }
 
+/* フッター */
+.footer {
+    height: 125px;
+    padding: 0 4rem;
+
+    background-color: #00205B;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__left {}
+
+.footer__left--group {
+    margin-top: .75rem;
+
+    font-size: .875rem;
+}
+
+.footer__left--sitename {
+    margin-top: .5rem;
+    margin-bottom: .75rem;
+
+    font-size: 1.5rem;
+}
+
+.footer__right {
+    background: #FFF;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 0 1rem;
     }
-}
 
-/* フッター */
-.footer {
-
+    .footer {
+        padding: 0 1rem;
+    }
 }
