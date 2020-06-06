@@ -12,8 +12,16 @@ a {
     padding: 0 4rem;
 }
 
+.line-break {
+    display: none;
+}
+
 @media screen and (max-width:768px) {
     .container {
         padding: 0 2rem;
+    }
+
+    .line-break {
+        display: inline;
     }
 }

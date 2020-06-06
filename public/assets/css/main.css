@@ -39,17 +39,26 @@
     transform: translate(0,-50%);
 }
 
-.hero__phrase--line {
-    display: none;
+/* 少林寺拳法の紹介文 */
+.introduction {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.introduction__main {
+    padding: 3rem 0;
+
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.introduction__phrase {
+    line-height: 2;
 }
 
 /* スマホ対応 */
 @media screen and (max-width: 768px) {
     .hero__phrase {
         font-size: 2.5rem;
-    }
-
-    .hero__phrase--line {
-        display: inline;
     }
 }
