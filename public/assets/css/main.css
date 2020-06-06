@@ -20,7 +20,7 @@
 .hero__image {
     height: 500px;
 
-    background: url("/public/assets/images/index/hero.jpg") no-repeat center;
+    background: url("/assets/images/index/hero.jpg") no-repeat center;
     background-size: cover;
     filter: brightness(65%);
 }
