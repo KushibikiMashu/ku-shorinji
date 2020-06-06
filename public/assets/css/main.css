@@ -34,9 +34,9 @@
 
     position: absolute;
     top: 50%;
-    -ms-transform: translate(0,-50%);
-    -webkit-transform: translate(0,-50%);
-    transform: translate(0,-50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
 
 /* 少林寺拳法の紹介文 */
@@ -62,7 +62,7 @@
     width: 100%;
     padding: 2rem 0;
 
-    display:flex;
+    display: flex;
     text-align: center;
 }
 
@@ -70,7 +70,7 @@
     flex-grow: 1;
 }
 
-.practice__left--image{
+.practice__left--image {
     height: 375px;
 
     background: url("/assets/images/index/enbu.png") no-repeat center;
@@ -82,7 +82,7 @@
     align-items: center;
 }
 
-.practice__right--image{
+.practice__right--image {
     height: 375px;
 
     background: url("/assets/images/index/randori.png") no-repeat center;
@@ -102,7 +102,7 @@
     color: #FFF;
 }
 
-.practice__left--button, .practice__right--button{
+.practice__left--button, .practice__right--button {
     padding: 1rem 3rem;
     margin-top: 5rem;
 
@@ -125,7 +125,7 @@
         flex-grow: 0;
     }
 
-    .practice__left--button, .practice__right--button{
+    .practice__left--button, .practice__right--button {
         padding: .75rem 1.25rem;
     }
 }

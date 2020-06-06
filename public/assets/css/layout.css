@@ -9,7 +9,8 @@
 }
 
 /* scssを使っていないので、便宜的にElementのクラス名を付与しておく */
-.navbar__left {}
+.navbar__left {
+}
 
 .navbar__left--group {
     margin-top: .75rem;
@@ -41,7 +42,8 @@
     align-items: center;
 }
 
-.footer__left {}
+.footer__left {
+}
 
 .footer__left--group {
     margin-top: .75rem;
