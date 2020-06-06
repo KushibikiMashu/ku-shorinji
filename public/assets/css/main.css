@@ -46,7 +46,7 @@
     text-align: center;
 }
 
-.introduction__main {
+.introduction__title {
     padding: 3rem 0;
 
     font-size: 2.25rem;
@@ -57,9 +57,75 @@
     line-height: 2;
 }
 
+/* 演武と乱捕 */
+.practice {
+    width: 100%;
+    padding: 2rem 0;
+
+    display:flex;
+    text-align: center;
+}
+
+.practice__left, .practice__right {
+    flex-grow: 1;
+}
+
+.practice__left--image{
+    height: 375px;
+
+    background: url("/assets/images/index/enbu.png") no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.practice__right--image{
+    height: 375px;
+
+    background: url("/assets/images/index/randori.png") no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.practice__left--title, .practice__right--title {
+    width: 100%;
+    padding-top: 5rem;
+
+    font-size: 3.5rem;
+    color: #FFF;
+}
+
+.practice__left--button, .practice__right--button{
+    padding: 1rem 3rem;
+    margin-top: 5rem;
+
+    border-radius: 0.25rem;
+    background-color: #0D47A1;
+    cursor: pointer;
+}
+
 /* スマホ対応 */
 @media screen and (max-width: 768px) {
     .hero__phrase {
         font-size: 2.5rem;
+    }
+
+    .practice {
+        flex-direction: column;
+    }
+
+    .practice__left, .practice__right {
+        flex-grow: 0;
+    }
+
+    .practice__left--button, .practice__right--button{
+        padding: .75rem 1.25rem;
     }
 }
