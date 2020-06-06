@@ -55,6 +55,7 @@
 
 .introduction__phrase {
     line-height: 2;
+    font-size: 1.25rem;
 }
 
 /* 演武と乱捕 */
@@ -111,6 +112,47 @@
     cursor: pointer;
 }
 
+/* 主将挨拶 */
+.greeting {
+    padding: 1rem 0;
+}
+
+.greeting__title {
+    padding: 3rem 0;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.greeting__content {
+    padding-right: 3rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.greeting__content--image {
+    padding-left: 3rem;
+}
+
+.greeting__content--right {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.greeting__content--right-body {
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.greeting__content--right-name {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
 /* スマホ対応 */
 @media screen and (max-width: 768px) {
     .hero__phrase {
@@ -128,4 +170,28 @@
     .practice__left--button, .practice__right--button {
         padding: .75rem 1.25rem;
     }
+
+    .greeting {
+        margin: 0;
+    }
+
+    .greeting__content {
+        display: block;
+    }
+
+    .greeting__content--image {
+        padding-left: 0;
+    }
+
+    .greeting__content--right-body {
+        padding: 1.75rem 0;
+
+        font-size: 1.25rem;
+    }
+
+    .greeting__content--right-name {
+        text-align: center;
+        font-size: 1rem;
+    }
+
 }
