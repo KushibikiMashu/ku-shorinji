@@ -1,3 +1,7 @@
+a {
+    color: #FFF;
+}
+
 /* お知らせ */
 .notice {
     padding: .5rem 0;
@@ -114,7 +118,8 @@
 
 /* 主将挨拶 */
 .greeting {
-    padding: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 .greeting__title {
@@ -143,14 +148,64 @@
 }
 
 .greeting__content--right-body {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.25;
 }
 
 .greeting__content--right-name {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.5;
+}
+
+/* 部員紹介 */
+.members {
+    padding: 1rem 0;
+    background-color: #FAFAFA;
+}
+
+.members__title {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.members__subtitle {
+    padding-bottom: 1rem;
+
+    text-align: center;
+}
+
+.members__content {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.members__content--pair {
+    padding: 2.25rem 0;
+
+    text-align: center;
+}
+
+.members__content--pair-image {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 9999rem;
+}
+
+.members__content--pair-title {
+    padding: 1rem 0;
+
+    color: #000000;
 }
 
 /* スマホ対応 */
@@ -159,6 +214,7 @@
         font-size: 2.5rem;
     }
 
+    /* 練習内容 */
     .practice {
         flex-direction: column;
     }
@@ -171,6 +227,7 @@
         padding: .75rem 1.25rem;
     }
 
+    /* 主将挨拶 */
     .greeting {
         margin: 0;
     }
@@ -183,6 +240,10 @@
         padding-left: 0;
     }
 
+    .greeting__content {
+        padding-right: 0;
+    }
+
     .greeting__content--right-body {
         padding: 1.75rem 0;
 
@@ -190,8 +251,15 @@
     }
 
     .greeting__content--right-name {
+        margin-left: auto;
+        margin-right: auto;
+
         text-align: center;
         font-size: 1rem;
     }
 
+    /* 部員紹介 */
+    .members__content {
+        margin: 0;
+    }
 }

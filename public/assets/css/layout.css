@@ -1,14 +1,17 @@
+.navbar p, footer p {
+    color: #FFF;
+}
+
 /* ヘッダー */
 .navbar {
     padding: .5rem 4rem;
 
     background-color: #00205B;
-    color: #FFFFFF;
     display: flex;
     justify-content: space-between;
 }
 
-/* scssを使っていないので、便宜的にElementのクラス名を付与しておく */
+/* 便宜的にElementのクラス名を付与しておく */
 .navbar__left {
 }
 
