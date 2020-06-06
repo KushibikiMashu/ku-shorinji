@@ -34,12 +34,13 @@
 <!-- お知らせ -->
 <div class="notice">
     <p class="notice__text">
-        <a href="/">LINEで部活の情報をGET! check ></a>
+        <a href="/"><span>LINEで部活の情報をGET! check ></span></a>
     </p>
 </div>
 
 <!-- メイン画像 -->
 <div class="hero">
+    <!--  TODO 画像をimgタグで読み込み  -->
     <div class="hero__image"></div>
     <h1 class="hero__phrase">強くなれる<br class="line-break"/>理由を知った</h1>
 </div>
@@ -59,15 +60,17 @@
 <!-- 演武と乱捕 -->
 <div class="practice">
     <div class="practice__left">
+        <!--  TODO 画像をimgタグで読み込み  -->
         <div class="practice__left--image">
             <p class="practice__left--title">演武</p>
-            <a href="/" class="practice__left--button">もっと知る</a>
+            <a href="/" class="practice__left--button"><span>もっと知る</span></a>
         </div>
     </div>
     <div class="practice__right">
+        <!--  TODO 画像をimgタグで読み込み  -->
         <div class="practice__right--image">
             <p class="practice__right--title">乱捕</p>
-            <a href="/" class="practice__right--button">もっと知る</a>
+            <a href="/" class="practice__right--button"><span>もっと知る</span></a>
         </div>
     </div>
 </div>
@@ -77,8 +80,10 @@
     <div class="greeting">
         <h2 class="greeting__title">主将挨拶</h2>
         <div class="greeting__content">
-            <img class="greeting__content--image" src="assets/images/index/shushou.jpg" width="300" height="300"
-                 alt="主将の顔写真"/>
+            <div>
+                <img class="greeting__content--image" src="assets/images/index/shushou.jpg" width="300" height="300"
+                     alt="主将の顔写真"/>
+            </div>
             <div class="greeting__content--right">
                 <p class="greeting__content--right-body">
                     みんなで強くなろう。女子部員もいます。<br/>
@@ -123,15 +128,88 @@
     </div>
 </div>
 
-<!-- SNS -->
-<div>
-
-</div>
-
 <!-- 活動内容 -->
-<div>
+<div class="container">
+    <div class="activity">
+        <h2 class="activity__title">活動内容</h2>
+        <div class="activity__content">
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-renshu.jpg" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">活動内容・活動日時</h3>
+                        <p class="activity__content--card-body--subtitle">練習の内容と日時を紹介します</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
 
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-contest.jpg" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">大会成績</h3>
+                        <p class="activity__content--card-body--subtitle">大会の入賞者をまとめています</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-schedule.jpg" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">年間スケジュール</h3>
+                        <p class="activity__content--card-body--subtitle">一年の行事を紹介します</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-gasshuku.jpg" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">合宿風景</h3>
+                        <p class="activity__content--card-body--subtitle">夏合宿・春合宿の写真です</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-eikenkai.jpg" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">叡拳会</h3>
+                        <p class="activity__content--card-body--subtitle">OB・OG会のHPです</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="activity__content--card">
+                    <img class="activity__content--card-image" src="assets/images/index/activity-old-homepage.png" alt="練習風景">
+                    <div class="activity__content--card-body">
+                        <h3 class="activity__content--card-body--title">旧ホームページ</h3>
+                        <p class="activity__content--card-body--subtitle">過去のHPです</p>
+                        <div class="activity__content--card-body--bar"></div>
+                        <p class="activity__content--card-body--read-more">もっと知る</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
 </div>
+
+<!--<div class="sns"></div>-->
 
 <!-- footer -->
 <footer class="footer">
