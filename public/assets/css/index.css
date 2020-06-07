@@ -51,13 +51,13 @@
 
 /* 少林寺拳法の紹介文 */
 .introduction {
-    margin: 4rem 0;
+    margin: 6rem 0;
 
     text-align: center;
 }
 
 .introduction__title {
-    padding: 3rem 0;
+    padding: 4rem 0;
 
     font-size: 2.25rem;
     font-weight: 400;
@@ -143,7 +143,7 @@
 
 /* 主将挨拶 */
 .greeting {
-    padding: 4rem 0;
+    padding: 6rem 0;
 }
 
 .greeting__title {
@@ -217,7 +217,7 @@
 
 /* 部員紹介 */
 .members {
-    padding: 4rem 0;
+    padding: 6rem 0;
     background-color: #FAFAFA;
 }
 
@@ -349,8 +349,7 @@
 }
 
 .sns__icons--image {
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 0 12px;
 }
 
 /* スマホ対応 */
