@@ -11,16 +11,21 @@
     font-weight: 400;
 }
 
+.members__list {
+    padding-bottom: 5rem;
+}
+
 .members__grade {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 
     text-align: center;
 }
 
 table {
+    width: 100%;
+
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
 }
 
 table tr {
