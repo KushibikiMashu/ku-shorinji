@@ -1,0 +1,43 @@
+.members {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.members__title {
+    padding: 3rem 0;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.members__grade {
+    padding-bottom: 3rem;
+
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table tr {
+    border-bottom: solid 1px #eee;
+    /*cursor: pointer;*/
+}
+
+/*table tr:hover {*/
+/*    background-color: #d4f0fd;*/
+/*}*/
+
+table th, table td {
+    text-align: center;
+    width: 25%;
+    padding: 1rem 0;
+}
+
+.members__table--row-name {
+    font-weight: bold;
+}
