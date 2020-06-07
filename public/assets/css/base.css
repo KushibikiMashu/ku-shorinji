@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 .container {
     padding: 0 4rem;
 }

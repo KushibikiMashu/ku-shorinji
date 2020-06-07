@@ -273,7 +273,7 @@
 
 /* 活動内容 */
 .activity {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
 }
 
 .activity__title {
@@ -282,8 +282,8 @@
     font-weight: 400;
 }
 
-.activity__content{
-    max-width: 64rem;
+.activity__content {
+    max-width: 1024px;
     padding: 4rem 0 0 0;
     margin-left: auto;
     margin-right: auto;
@@ -329,10 +329,28 @@
     border: 0.5px solid #C4C4C4;
 }
 
-.activity__content--card-body--read-more{
+.activity__content--card-body--read-more {
     padding: 1.25rem 0 0.5rem 0;
 
     color: #4299E1;
+}
+
+/* SNSボタン */
+.sns {
+    padding: 2rem 0 4rem;
+}
+
+.sns__icons {
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns__icons--image {
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 /* スマホ対応 */
