@@ -19,6 +19,20 @@ li {
     display: none;
 }
 
+.return-top-wrapper{
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.return-top-wrapper__button {
+    padding: .75rem 2rem;
+
+    color: #FFF;
+    border-radius: 0.25rem;
+    background-color: #0D47A1;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         padding: 0 2rem;
