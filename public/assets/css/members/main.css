@@ -1,0 +1,58 @@
+.main {
+    background-color: #fafafa;
+}
+
+.main-container {
+    max-width: 568px;
+    margin: 0 auto;
+}
+
+.main__image-wrapper {
+}
+
+.main__image {
+    width: 100%;
+}
+
+.main__name {
+    padding: 2rem 0;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.main__introduction {
+    padding: .5rem 2.5rem;
+    margin: 0 0 2rem;
+
+    background-color: #FFF;
+    border-radius: .75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.main__introduction--list {
+    padding: .5rem 0;
+
+    display: flex;
+}
+
+.main__introduction--term {
+    width: 45%;
+    margin-right: 1rem;
+}
+
+.main__introduction--description {
+    width: 55%;
+    margin: 0;
+}
+
+.button-space {
+    padding: 3rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main__introduction {
+        margin: 0 2rem 2rem;
+    }
+}
