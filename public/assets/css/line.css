@@ -16,3 +16,7 @@
     background-color: #0D47A1;
     cursor: pointer;
 }
+
+.button-space {
+    margin: 4rem 0;
+}

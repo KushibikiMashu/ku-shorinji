@@ -171,7 +171,7 @@
     flex-direction: column;
 }
 
-.greeting__content--right-body {
+.greeting__content--right-paragraph {
     font-size: 1.25rem;
     line-height: 1.25;
 }
@@ -200,7 +200,7 @@
         padding-right: 0;
     }
 
-    .greeting__content--right-body {
+    .greeting__content--right-paragraph {
         padding: 1.75rem 0;
 
         font-size: 1.25rem;
