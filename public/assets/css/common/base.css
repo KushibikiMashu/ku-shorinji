@@ -32,6 +32,15 @@ li {
     cursor: pointer;
 }
 
+.return-top-wrapper__button-prev, .return-top-wrapper__button-next {
+    padding: .75rem 2rem;
+
+    color: #FFF;
+    border-radius: 0.25rem;
+    background-color: #0D47A1;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         padding: 0 2rem;
