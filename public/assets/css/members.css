@@ -31,12 +31,7 @@ table {
 
 table tr {
     border-bottom: solid 1px #eee;
-    /*cursor: pointer;*/
 }
-
-/*table tr:hover {*/
-/*    background-color: #d4f0fd;*/
-/*}*/
 
 table th, table td {
     text-align: center;

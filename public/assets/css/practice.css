@@ -1,0 +1,76 @@
+.main {
+    padding: 1rem 0;
+    max-width: 854px;
+    margin: 0 auto;
+}
+
+.main__title {
+    padding: 2rem 0;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.table-wrapper {
+    margin-bottom: 3rem;
+}
+
+table {
+    width: 850px;
+    padding: 0;
+    margin: 0 auto;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table tr {
+    background-color: #fff;
+    border: 2px solid #eee;
+}
+
+table th {
+    padding: 2rem;
+    border-right: 2px solid #fff;
+    font-weight: 500;
+}
+
+table td {
+    padding: 2rem .5rem;
+    border-right: 2px solid #eee;
+    text-align: center;
+}
+
+table thead tr {
+    background-color: #0D47A1;
+    color: #fff;
+}
+
+table thead tr th span {
+    font-size: 1.5rem;
+}
+
+table tbody th {
+    border-right: 2px solid #eee;
+}
+
+.time {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.bg-gray {
+    background: #C4C4C4;
+}
+
+@media screen and (max-width: 600px) {
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+}
+
+.button-space {
+    margin: 0 0 4rem;
+}
