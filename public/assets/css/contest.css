@@ -1,9 +1,8 @@
 .contest {
-
 }
 
 .contest__title {
-    padding: 2rem 0;
+    padding: 1rem 0;
 
     text-align: center;
     font-size: 2.25rem;
@@ -18,21 +17,94 @@
     max-width: 768px;
 }
 
-.button-space {
-    margin: 4rem 0;
-}
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .contest__image {
         width: 100%;
     }
 }
 
-table tr:nth-child(odd){
-    background-color:#f0f0f0;
+.contest__table-of-content {
+    max-width: 808px;
+    padding: 1.25rem;
+    margin: 3rem auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
 }
 
-/* 偶数行のスタイル */
-table tr:nth-child(even){
-    background-color:white;
+.contest__table-of-content li {
+    margin: .5rem 1rem;
 }
+
+.contest__year {
+    padding: 2rem 0;
+
+    text-align: center;
+}
+
+table {
+    width: 850px;
+    padding: 0;
+    margin: 1.5rem auto;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table tr {
+    background-color: #fff;
+    border: 2px solid #eee;
+}
+
+table th {
+    padding: 1rem;
+    border-right: 2px solid #fff;
+    font-weight: 500;
+}
+
+table td {
+    padding: .5rem;
+    border-right: 2px solid #eee;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+table thead tr:first-child {
+    background-color: #0D47A1;
+}
+
+table td:first-child {
+    font-weight: 600;
+}
+
+table thead tr {
+    background-color: #0D47A1;
+    color: #fff;
+}
+
+table thead tr th span {
+    font-size: 1.5rem;
+}
+
+table tbody th {
+    border-right: 2px solid #eee;
+}
+
+@media screen and (max-width: 768px) {
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+}
+
+.contest__paragraph {
+    text-align: center;
+}
+
+.button-space {
+    margin: 4rem 0;
+}
+
