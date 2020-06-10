@@ -3,15 +3,8 @@
     margin: 0 auto;
 }
 
-.members__title {
-    padding: 3rem 0;
-
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 400;
-}
-
 .members__list {
+    padding-top: 2rem;
     padding-bottom: 5rem;
 }
 

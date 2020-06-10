@@ -1,14 +1,6 @@
 .contest {
 }
 
-.contest__title {
-    padding: 1rem 0;
-
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 400;
-}
-
 .contest__image-wrapper {
     text-align: center;
 }
