@@ -12,6 +12,7 @@
     font-weight: 400;
 }
 
+/* 練習日時 */
 .table-wrapper {
     margin-bottom: 3rem;
 }
@@ -73,4 +74,44 @@ table tbody th {
 
 .button-space {
     margin: 0 0 4rem;
+}
+
+/* 練習内容 */
+.practice {
+    padding-bottom: 3rem;
+}
+
+.practice__title {
+    padding-bottom: 2rem;
+
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.practice__content {
+    display: flex;
+}
+
+.practice__content--image {
+}
+
+.practice__content--description {
+    margin-left: 2rem;
+
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .practice__content {
+        display: block;
+    }
+
+    .practice__content--description {
+        padding-top: .5rem;
+        margin-left: 0;
+
+        font-size: 1rem;
+    }
+
 }
