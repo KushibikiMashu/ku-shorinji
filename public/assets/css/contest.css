@@ -61,7 +61,7 @@ table td {
     text-align: center;
 }
 
-table tr:nth-child(odd) {
+table tr:nth-child(even) {
     background-color: #f0f0f0;
 }
 

@@ -54,10 +54,6 @@ table tbody th {
     font-size: 1.25rem;
 }
 
-.bg-gray {
-    background: #C4C4C4;
-}
-
 @media screen and (max-width: 600px) {
     .table-wrapper {
         overflow-x: scroll;

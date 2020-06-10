@@ -23,6 +23,10 @@ li {
     font-weight: 400;
 }
 
+.bg-gray {
+    background: #C4C4C4;
+}
+
 .line-break {
     display: none;
 }
