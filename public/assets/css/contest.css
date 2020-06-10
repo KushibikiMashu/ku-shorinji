@@ -1,0 +1,38 @@
+.contest {
+
+}
+
+.contest__title {
+    padding: 2rem 0;
+
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.contest__image-wrapper {
+    text-align: center;
+}
+
+.contest__image {
+    max-width: 768px;
+}
+
+.button-space {
+    margin: 4rem 0;
+}
+
+@media screen and (max-width:768px) {
+    .contest__image {
+        width: 100%;
+    }
+}
+
+table tr:nth-child(odd){
+    background-color:#f0f0f0;
+}
+
+/* 偶数行のスタイル */
+table tr:nth-child(even){
+    background-color:white;
+}
