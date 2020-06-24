@@ -1,0 +1,42 @@
+.main {
+    padding: 1rem 0;
+    max-width: 854px;
+    margin: 0 auto;
+}
+
+/* 写真 */
+.picture {
+    padding-bottom: 3rem;
+}
+
+.picture__content {
+    display: flex;
+}
+
+.picture__content--image {
+}
+
+.picture__content--description {
+    margin-left: 2rem;
+
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.button-space {
+    margin: 4rem 0;
+}
+
+@media (max-width: 768px) {
+    .picture__content {
+        display: block;
+    }
+
+    .picture__content--description {
+        padding-top: .5rem;
+        margin-left: 0;
+
+        font-size: 1rem;
+    }
+
+}

@@ -29,6 +29,7 @@ table td {
 
 table td:first-child {
     padding: .5rem 1rem;
+    font-weight: 600;
 }
 
 table tr:nth-child(even) {
@@ -39,8 +40,8 @@ table thead tr:first-child {
     background-color: #0D47A1;
 }
 
-table td:first-child {
-    font-weight: 600;
+table td {
+    font-size: 1.25rem;
 }
 
 table thead tr {
