@@ -1,40 +1,35 @@
+const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
 
-const years = [ 2018, 2017]
-
-const path = 'public/schedules/summer-gasshuku/'
-const ext = '.html'
-
-// 夏合宿 2018
-const title = '夏合宿'
+// 入門式 2018
+const years = [2018, 2017]
+const title = '入門式'
+const event = 'nyumon-ceremonies/'
 
 const obj = {
-  2018: [
-    '時間をふんだんに使った基本で、基礎から力をつけていきます。',
-    '朝ジョグの時間です。心地よい潮風を受けながら早朝の宮津を駆け抜けます。',
-    '術科の時間。八木監督より技術指導を賜ります。',
-    '今年もこの部の創設者の一人、後神先輩のご講話を全員で聞きました。',
-    '乱捕練習、お互い相手を倒さんと全力で頑張ります。',
-    '天橋立を見ながらの１５kmマラソン、最後は天橋立を端から端まで走ります。一回生が根性を見せました。',
-    'マラソン終わりの一時の休息。',
-  ],
-  2017:  [
-    "夏合宿の基本です。普段の練習を超える練習量でうまくなっていきましょう。",
-    "朝ジョグの時間です",
-    "筋トレもたっぷりあります。写真は体幹の時間。",
-    "今年もこの部の初代である後神先輩のご講話を全員で聞きました。",
-    "乱捕練習、どちらも倒されないように本気で頑張ります。",
-    "天橋立を見ながらの１５kmマラソン、最後は天橋立を端から端まで走ります。全員無事走り終えることができました！",
-  ],
+  2018: ["入門式がはじまります。一回生ははじめての道訓に戸惑っているようですね", "鈴木・北原、全一ペアによる奉納演武です。", "監督にご講話いただきました。"],
+  2017: ["監督によるご講話です。部活は大変なときもあるけれど、そんなときこそあきらめなければ得るものがある、という内容でした。継続は力なり、ですね！", "鈴木・北原、全一ペアによる奉納演武です。この演武を目標として成長していきましょう！", "京大少林寺拳法部の入門証書を授けます。"],
 }
 
 const bigObj = {
-  2018: '１週間の夏合宿を終えた後の集合写真、全員お疲れ様でした。この夏合宿の経験を糧にこれからますます頑張っていきましょう。',
-  2017: "１週間の夏合宿を終えた後の集合写真、いい顔してます。今年も記憶に残る合宿でした。",
+  2018: "今年の一回生はとにかく人数が多くて才気あふれていますね！同期とともにこれから頑張っていきましょう！",
+  2017: "集合写真です！入門おめでとう！同期とともにこれから頑張っていきましょう！",
 }
 
-function tmpl(year,  heading, body) {
-  return  `<!doctype html>
+// 画像
+const dir = '/nyumon-ceremonies'
+const urlObj = {
+  2018: [],
+  2017: [],
+}
+
+
+const path = 'public/pictures/' + event
+const ext = '.html'
+
+function tmpl(year, heading, body) {
+  return `<!doctype html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +42,7 @@ function tmpl(year,  heading, body) {
     <link rel='stylesheet' href='/assets/css/common/layout.css'>
 
     <!-- このページのCSS -->
-    <link rel='stylesheet' href='/assets/css/schedules/main.css'>
+    <link rel='stylesheet' href='/assets/css/pictures/main.css'>
 
 </head>
 <body>
@@ -75,6 +70,10 @@ function tmpl(year,  heading, body) {
     ${heading}
 
     ${body}
+    <div class="return-top-wrapper button-space">
+        <a class="return-top-wrapper__button" href="/pictures.html">一つ前に戻る</a>
+    </div>
+
     <div class="return-top-wrapper button-space">
         <a class="return-top-wrapper__button" href="/">TOPに戻る</a>
     </div>
@@ -107,7 +106,7 @@ years.forEach(year => {
   obj[year].forEach((text, i) => {
     phs += `<div class="picture">
     <div class="picture__content">
-        <img class="picture__content--image" src="/assets/images/schedules/summer-gasshuku/${year}/${i+1}.jpeg" alt="練習風景">
+        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 1}.jpeg" alt="練習風景">
         <p class="picture__content--description">
             ${text}
         </p>
@@ -117,7 +116,7 @@ years.forEach(year => {
     if (i === obj[year].length - 1) {
       phs += `<div class="picture">
     <div class="picture__content--big">
-        <img class="picture__content--image" src="/assets/images/schedules/summer-gasshuku/${year}/${i+2}.jpeg" alt="練習風景">
+        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 2}.jpeg" alt="練習風景">
         <p class="picture__content--description--big">
             ${bigObj[year]}
         </p>
@@ -129,8 +128,45 @@ years.forEach(year => {
 
   const heading = `<h1 class="heading">${title}（${year}年度）</h1>`
 
-  const filename= path + year + ext
+  const filename = path + year + ext
   const html = tmpl(year, heading, phs)
   fs.writeFileSync(filename, html)
+
+  // 画像
+  const target = 'public/assets/images/pictures' + dir
+  urlObj[year].forEach((url, i) => {
+    (async () => {
+      const res = await axios(url, {responseType: 'arraybuffer'})
+      const ext = path.extname(url)
+      const filename = `${target}/${year}/${(i + 1).toString()}${ext}`
+      fs.writeFileSync(filename, new Buffer.from(res.data), 'binary')
+      console.log(filename)
+    })()
+  })
 })
 
+// ブラウザ
+// // 文字
+// let arr = []
+// $('#main').childNodes.forEach(el => {
+//   const txt = el.textContent.trim()
+//   if (txt === '') return
+//   if (["京都大学体育会少林寺拳法部", "写真", "ひとつ前に戻る", "TOPに戻る"].includes(txt)) return
+//   arr.push(txt)
+// });
+// const b = arr.pop()
+// arr.shift()
+// arr.shift()
+// console.log(arr)
+// console.log(b)
+//
+// // 画像パス
+// let arr = []
+// $('#main').childNodes.forEach(el => {
+//   if (el.tagName !== 'P') return
+//   const chd = el.firstElementChild
+//   if (!chd) return
+//   const path = chd.src
+//   arr.push(path)
+// })
+// console.log(arr.filter(a => typeof a === 'string'))
