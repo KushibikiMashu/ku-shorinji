@@ -32,13 +32,13 @@ const obj = {
     ],
   2017:  [
     "「山城ブロック交流大会」今年はいつもの龍谷、京女だけでなく、立命や京産も出場していて規模が大きくなりましたね。初出場の寺島吉田が堂々の２位でした！",
-    "京都学生大会",
-    "京都学生大会です。ここから大会ラッシュなのでどんどん経験を積んで成長していきましょう！",
+    "「京都学生大会」京都学生大会です。ここから大会ラッシュなのでどんどん経験を積んで成長していきましょう！",
     "集合写真です。",
     "「全日本学生大会」日本武道館にて、全日本学生大会です。毎年これだけの人数の拳士が集うのはすごいですね。",
     "部旗です。",
     "演武では入賞することはできませんでしたが、これを糧として頑張っていきたいです。",
-    "「関西新人大会」関西新人大会です。"],
+    "「関西新人大会」関西新人大会です。"
+  ],
 }
 
 const bigObj = {
@@ -56,7 +56,6 @@ const urlObj = {
   // 8
   2017: ["http://kyotoushorinji.sakura.ne.jp/pict/17uji1.jpg", "http://kyotoushorinji.sakura.ne.jp/pict/17kyotogakusei1.jpg", "http://kyotoushorinji.sakura.ne.jp/pict/17kyotogakusei4.JPG", "http://kyotoushorinji.sakura.ne.jp/pict/17zenniti1.JPG", "http://kyotoushorinji.sakura.ne.jp/pict/17zenniti2.JPG", "http://kyotoushorinji.sakura.ne.jp/pict/17zenniti3.JPG", "http://kyotoushorinji.sakura.ne.jp/pict/17kansaisinnjinn1.JPG", "http://kyotoushorinji.sakura.ne.jp/pict/17kansaisinnjinn2.JPG"],
 }
-
 
 const dir = `/${dirname}`
 const htmlPath = 'public/pictures/' + event
@@ -136,11 +135,17 @@ function tmpl(year, heading, body) {
 }
 
 years.forEach(year => {
+  if (obj[year].length !== urlObj[year].length -1) {
+    console.log(year, 'おかしいよ。数が合わない', obj[year].length, urlObj[year].length-1)
+  }
+
   let phs = ''
   obj[year].forEach((text, i) => {
-    phs += `<div class="picture">
+    const imageExt = path.extname(urlObj[year][i])
+
+      phs += `<div class="picture">
     <div class="picture__content">
-        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 1}.jpeg" alt="練習風景">
+        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 1}${imageExt}" alt="練習風景">
         <p class="picture__content--description">
             ${text}
         </p>
@@ -150,7 +155,7 @@ years.forEach(year => {
     if (i === obj[year].length - 1) {
       phs += `<div class="picture">
     <div class="picture__content--big">
-        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 2}.jpeg" alt="練習風景">
+        <img class="picture__content--image" src="/assets/images/pictures/${dir}/${year}/${i + 2}${imageExt}" alt="練習風景">
         <p class="picture__content--description--big">
             ${bigObj[year]}
         </p>
@@ -165,7 +170,7 @@ years.forEach(year => {
   const filename = htmlPath + year + extHtml
   console.log(filename);
   const html = tmpl(year, heading, phs)
-  // fs.writeFileSync(filename, html)
+  fs.writeFileSync(filename, html)
 
   // 画像
   const target = 'public/assets/images/pictures' + dir
