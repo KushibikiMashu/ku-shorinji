@@ -16,6 +16,19 @@
 .picture__content--image {
 }
 
+/* 一番下の大きい写真 */
+.picture__content--big {
+    text-align: center;
+}
+
+.picture__content--description--big {
+    margin: 0;
+    padding-top: 8px;
+
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
 .picture__content--description {
     margin-left: 2rem;
 
@@ -39,4 +52,7 @@
         font-size: 1rem;
     }
 
+    .picture__content--image {
+        width: 300px;
+    }
 }
