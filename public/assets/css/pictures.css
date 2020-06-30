@@ -1,0 +1,35 @@
+.pictures__title {
+    padding-top: 2rem;
+
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.pictures__img {
+    margin-top: 2rem;
+
+    text-align: center;
+}
+
+.pictures__list {
+    padding: 0;
+    margin: 2rem 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pictures__list > li {
+    margin: 12px 24px;
+
+    font-size: 24px;
+    list-style: circle;
+}
+
+@media screen and (max-width: 768px) {
+    .pictures__img--content {
+        width: 300px;
+    }
+}
