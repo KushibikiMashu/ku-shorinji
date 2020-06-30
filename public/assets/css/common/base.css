@@ -44,10 +44,6 @@ li {
     cursor: pointer;
 }
 
-.button-space {
-    margin: 4rem 0;
-}
-
 @media screen and (max-width: 768px) {
     .container {
         padding: 0 2rem;

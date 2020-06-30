@@ -28,6 +28,10 @@
     list-style: circle;
 }
 
+.button-space {
+    margin: 4rem 0;
+}
+
 @media screen and (max-width: 768px) {
     .pictures__img--content {
         width: 300px;
