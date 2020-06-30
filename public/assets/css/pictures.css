@@ -28,6 +28,10 @@
     list-style: circle;
 }
 
+.pictures__description {
+    text-align: center;
+}
+
 .button-space {
     margin: 4rem 0;
 }
