@@ -9,6 +9,6 @@
   "license": "MIT",
   "devDependencies": {
     "bs-html-injector": "^3.0.3",
-    "browser-sync": "^2.1.6"
+    "browser-sync": "^2.27.10"
   }
 }
